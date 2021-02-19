@@ -12,13 +12,11 @@ var path = require("path");
 
 // Don't forget to everything listed here to `package.json`
 // modulePathIgnorePatterns.
+// The sharedBlackList code was patched in this version to fix the https://github.com/facebook/metro/issues/453
 var sharedBlacklist = [
-  /node_modules[/\\]react[/\\]dist[/\\].*/,
-
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
   /website\/node_modules\/.*/,
-
   /heapCapture\/bundle\.js/,
-
   /.*\/__tests__\/.*/
 ];
 
